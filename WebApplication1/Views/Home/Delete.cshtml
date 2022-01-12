@@ -1,0 +1,40 @@
+﻿@model WebApplication1.Models.Persona
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn-block nes-btn is-error" />
+            @Html.ActionLink("Regresar", "Index", null, new { @class = "btn-block nes-btn is-primary", style = "max-width:280px;" })
+        </div>
+
+    }
+</div>

@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.Persona
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "btn nes-btn is-success" })
+        </dt>
+
+        <dd>
+            @Html.ActionLink("Regresar", "Index", null, new { @class = "btn nes-btn is-primary" })
+        </dd>
+    </dl>
+</div>
